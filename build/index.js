@@ -63,8 +63,8 @@ var DateRangePickerImpl = function (props) {
     // console.log("rendering DateRangePicker");
     var _c = React.useState(__assign({}, initialDateRange)), dateRange = _c[0], setDateRange = _c[1];
     var _d = React.useState(), hoverDay = _d[0], setHoverDay = _d[1];
-    var _e = React.useState(intialFirstMonth || today), firstMonth = _e[0], setFirstMonth = _e[1];
-    var _f = React.useState(initialSecondMonth || (0, date_fns_1.addMonths)(firstMonth, 1)), secondMonth = _f[0], setSecondMonth = _f[1];
+    var _e = React.useState(intialFirstMonth || (0, date_fns_1.addMonths)(today, -1)), firstMonth = _e[0], setFirstMonth = _e[1];
+    var _f = React.useState(initialSecondMonth || today), secondMonth = _f[0], setSecondMonth = _f[1];
     var startDate = dateRange.startDate, endDate = dateRange.endDate;
     // handlers
     var setFirstMonthValidated = function (date) {
